@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ECO GROW | Protect Biodiversity</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+  body { font-family: Inter, system-ui, sans-serif; }
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  .clip-split {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  }
+</style>
+</head>
+
+<body class="bg-[#f4f3ef] text-gray-900 overflow-x-hidden">
+
+<!-- ================= HERO SECTION ================= -->
+<section class="relative h-screen w-full flex items-center justify-center text-center clip-diagonal">
+  <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1600"
+       class="absolute inset-0 w-full h-full object-cover brightness-50"
+       alt="forest canopy"/>
+
+  <div class="relative z-10 px-6 max-w-4xl">
+    <h1 class="text-lime-300 text-4xl md:text-6xl font-black tracking-tight uppercase leading-tight">
+      Protecting Biodiversity for Future Generations
+    </h1>
+
+    <p class="text-white mt-6 text-lg md:text-xl opacity-90">
+      Restoring ecosystems and preserving wildlife habitats worldwide.
+    </p>
+
+    <p class="mt-4 text-lime-300 font-bold tracking-widest uppercase">
+      Protect. Restore. Thrive.
+    </p>
+
+    <button class="mt-8 px-6 py-3 bg-lime-300 text-green-950 font-bold rounded-full hover:scale-105 transition">
+      Join Our Mission
+    </button>
+  </div>
+</section>
+
+<!-- ================= EDITORIAL GRID ================= -->
+<section class="bg-green-950 text-white py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="text-3xl md:text-4xl font-black mb-10">Featured Impact Stories</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="group relative rounded-xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200"
+             class="h-64 w-full object-cover group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute bottom-4 left-4">
+          <h3 class="font-bold text-lg">The Great Barrier Reef Recovery</h3>
+          <p class="text-lime-300 text-sm">Read more ↗</p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1523997596732-56d3b1c8b4f6?q=80&w=1200"
+             class="h-64 w-full object-cover group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute bottom-4 left-4">
+          <h3 class="font-bold text-lg">Arctic Ice Melt Accelerates</h3>
+          <p class="text-lime-300 text-sm">Read more ↗</p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200"
+             class="h-64 w-full object-cover group-hover:scale-110 transition duration-500"/>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute bottom-4 left-4">
+          <h3 class="font-bold text-lg">Urban Reforestation Success Stories</h3>
+          <p class="text-lime-300 text-sm">Read more ↗</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel -->
+    <div class="mt-16 relative">
+      <h3 class="text-xl font-bold mb-4">Wildlife Photography Showcase</h3>
+
+      <div class="overflow-hidden rounded-xl relative">
+        <div id="carousel" class="flex transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200"
+               class="w-full flex-shrink-0 h-80 object-cover"/>
+          <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1200"
+               class="w-full flex-shrink-0 h-80 object-cover"/>
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1200"
+               class="w-full flex-shrink-0 h-80 object-cover"/>
+        </div>
+
+        <button onclick="prevSlide()"
+          class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">
+          ‹
+        </button>
+
+        <button onclick="nextSlide()"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full">
+          ›
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= IMPACT SECTION ================= -->
+<section class="py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <h2 class="text-4xl font-black text-green-950">Our Mission & Impact</h2>
+    <p class="mt-3 text-gray-700 max-w-2xl">
+      ECO GROW drives global conservation programs restoring ecosystems, protecting wildlife, and building a sustainable future.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h3 class="text-3xl font-black text-green-950">500+ SPECIES</h3>
+        <p class="mt-2 text-gray-600">Protected through global conservation initiatives.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h3 class="text-3xl font-black text-green-950">2M ACRES</h3>
+        <p class="mt-2 text-gray-600">Restored habitats supporting biodiversity recovery.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h3 class="text-3xl font-black text-green-950">50 COUNTRIES</h3>
+        <p class="mt-2 text-gray-600">Active conservation programs worldwide.</p>
+      </div>
+
+    </div>
+
+    <p class="mt-10 text-sm text-gray-500">
+      Learn more at <span class="text-green-950 font-bold">ecogrow.org</span>
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= CTA SECTION ================= -->
+<section class="grid md:grid-cols-2 h-[80vh]">
+
+  <div class="bg-green-950 text-white p-10 flex flex-col justify-between">
+
+    <div>
+      <p class="text-lime-300 text-2xl font-black">↑ Every Action Counts for Our Planet</p>
+      <p class="mt-2 text-lg">Donate Now</p>
+    </div>
+
+    <div class="mt-10 bg-lime-300 text-green-950 p-6 rounded-xl space-y-3 font-bold">
+      <a href="#" class="block hover:underline">Volunteer</a>
+      <a href="#" class="block hover:underline">Subscribe</a>
+      <a href="#" class="block hover:underline">Become a Partner</a>
+    </div>
+
+  </div>
+
+  <div class="relative">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600"
+         class="w-full h-full object-cover"/>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-green-950 text-white py-16 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+
+    <div>
+      <h3 class="text-2xl font-black">↑ ECO GROW</h3>
+      <p class="text-sm text-gray-300 mt-2">Organization for global biodiversity protection.</p>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-gray-300">
+        <li>About</li>
+        <li>Programs</li>
+        <li>Impact</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold mb-3">Get Involved</h4>
+      <ul class="space-y-2 text-lime-300 font-semibold">
+        <li>Donate</li>
+        <li>Volunteer</li>
+        <li>Partner</li>
+        <li>Newsletter Signup</li>
+      </ul>
+    </div>
+
+    <div class="text-sm text-gray-400">
+      <p>contact@ecogrow.org</p>
+      <p>www.ecogrow.org</p>
+      <p class="mt-4">© 2025 ECO GROW. All Rights Reserved.</p>
+      <p>Privacy Policy | Terms</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  let index = 0;
+  const carousel = document.getElementById("carousel");
+  const totalSlides = carousel.children.length;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  // Smooth scroll behavior
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href"))?.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
