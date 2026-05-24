@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO GROW — Corporate Hub & Conservation Ecosystem</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-forest: #2d4a22;
+            --color-lime: #e2f197;
+            --color-neutral: #f4f3ef;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #121c0e;
+        }
+        .font-editorial {
+            font-family: 'Oswald', 'Arial Narrow', sans-serif;
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        }
+        @media (max-width: 768px) {
+            .clip-diagonal {
+                clip-path: none;
+            }
+        }
+        /* Page Transition Animations */
+        .page-fade {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-neutral-100 antialiased min-h-full flex flex-col justify-between overflow-x-hidden">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#2d4a22]/90 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-2 font-editorial text-2xl font-bold uppercase tracking-wider text-white">
+            <span class="text-[#e2f197]">↑</span> ECO GROW
+        </a>
+        <div class="hidden lg:flex items-center gap-6 text-xs uppercase font-medium tracking-widest text-white/90">
+            <a href="#about" class="hover:text-[#e2f197] transition-colors">About Overview</a>
+            <a href="#programs" class="hover:text-[#e2f197] transition-colors">Programs</a>
+            <a href="#impact-studies" class="hover:text-[#e2f197] transition-colors">Impact Studies</a>
+            <a href="#get-involved" class="hover:text-[#e2f197] transition-colors">Get Involved</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="#donate" class="bg-[#e2f197] text-[#2d4a22] font-editorial uppercase px-5 py-2 font-bold tracking-wider text-sm hover:bg-white transition-all transform hover:-translate-y-0.5">
+                Donate Capital
+            </a>
+        </div>
+    </nav>
+
+    <div id="router-viewport" class="pt-20 flex-grow page-fade">
+        </div>
+
+    <footer class="bg-[#1a2e14] text-white/90 border-t border-white/10 pt-16 pb-8 px-6 md:px-12 lg:px-24 w-full">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                
+                <div class="md:col-span-4 space-y-4">
+                    <div class="font-editorial text-3xl font-bold uppercase tracking-wider text-white flex items-center gap-2">
+                        <span class="text-[#e2f197]">↑</span> ECO GROW
+                    </div>
+                    <p class="text-xs text-neutral-400 max-w-sm leading-relaxed">
+                        International biodiversity framework architecture. Registered global environmental non-profit ecosystem stewardship collective.
+                    </p>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="font-editorial uppercase tracking-wider text-[#e2f197] text-sm font-bold mb-4 border-b border-white/10 pb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-neutral-300">
+                        <li><a href="#about" class="hover:text-white transition-colors flex items-center gap-1">→ About Corporate Overview</a></li>
+                        <li><a href="#programs" class="hover:text-white transition-colors flex items-center gap-1">→ Conservation Programs</a></li>
+                        <li><a href="#impact-studies" class="hover:text-white transition-colors flex items-center gap-1">→ Scientific Impact Studies</a></li>
+                        <li><a href="#get-involved" class="hover:text-white transition-colors flex items-center gap-1">→ Direct Action Portal</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="font-editorial uppercase tracking-wider text-[#e2f197] text-sm font-bold mb-4 border-b border-white/10 pb-2">Directives Network</h4>
+                    <div class="grid grid-cols-1 gap-y-2 font-editorial text-base uppercase font-bold tracking-wide">
+                        <a href="#get-involved" class="hover:text-[#e2f197] transition-colors">Get Involved</a>
+                        <a href="#donate" class="hover:text-[#e2f197] transition-colors">Donate Capital</a>
+                        <a href="#volunteer" class="hover:text-[#e2f197] transition-colors">Volunteer Force</a>
+                        <a href="#partner" class="hover:text-[#e2f197] transition-colors">Partner Alliances</a>
+                        <a href="#subscribe" class="hover:text-[#e2f197] text-sm tracking-widest text-[#e2f197]/80 mt-4 transition-colors block">Newsletter Signup →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-neutral-400">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="mailto:contact@ecogrow.org" class="hover:text-white transition-colors">contact@ecogrow.org</a>
+                    <a href="http://www.ecogrow.org" target="_blank" class="hover:text-white transition-colors">www.ecogrow.org</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#terms" class="hover:text-white transition-colors">Terms of Use</a>
+                </div>
+                <div>&copy; 2026 ECO GROW. All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const Pages = {
+            // MAIN HOME CONTAINER
+            home: `
+                <header class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1920" alt="Canopy" class="w-full h-full object-cover brightness-[0.35]">
+                    </div>
+                    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+                        <span class="text-[#e2f197] font-editorial uppercase tracking-widest text-sm font-bold mb-4">Eco Grow Hub</span>
+                        <h1 class="font-editorial text-5xl sm:text-7xl md:text-8xl font-bold text-white uppercase tracking-tight leading-none mb-6">PROTECTING BIODIVERSITY</h1>
+                        <div class="border-y border-white/20 py-2 px-6 mb-8">
+                            <span class="font-editorial text-lg tracking-[0.3em] text-[#e2f197]">PROTECT. RESTORE. THRIVE.</span>
+                        </div>
+                        <a href="#about" class="bg-[#e2f197] text-[#2d4a22] font-editorial uppercase font-bold tracking-widest px-8 py-4 text-sm hover:bg-white transition-all">Explore Corporate Architecture</a>
+                    </div>
+                </header>
+                <section class="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-[#2d4a22]/20 p-8 rounded-xl border border-white/5">
+                        <h3 class="font-editorial text-2xl text-[#e2f197] uppercase mb-4">Corporate Overview</h3>
+                        <p class="text-neutral-300 text-sm mb-6">Discover our mission structure, financial accountability directives, and elite environmental taskforce.</p>
+                        <a href="#about" class="text-white font-bold text-xs uppercase tracking-wider underline">Enter Page →</a>
+                    </div>
+                    <div class="bg-[#2d4a22]/20 p-8 rounded-xl border border-white/5">
+                        <h3 class="font-editorial text-2xl text-[#e2f197] uppercase mb-4">Conservation Units</h3>
+                        <p class="text-neutral-300 text-sm mb-6">Explore the global deployment operations protecting wild biomes and crucial target zones.</p>
+                        <a href="#programs" class="text-white font-bold text-xs uppercase tracking-wider underline">Enter Page →</a>
+                    </div>
+                    <div class="bg-[#2d4a22]/20 p-8 rounded-xl border border-white/5">
+                        <h3 class="font-editorial text-2xl text-[#e2f197] uppercase mb-4">Scientific Studies</h3>
+                        <p class="text-neutral-300 text-sm mb-6">Review raw telemetry metrics, field analysis data logs, and research white papers.</p>
+                        <a href="#impact-studies" class="text-white font-bold text-xs uppercase tracking-wider underline">Enter Page →</a>
+                    </div>
+                </section>
+            `,
+
+            // ABOUT CORPORATE OVERVIEW PAGE (Includes Team & Kenyan Partners)
+            about: `
+                <section class="bg-[#f4f3ef] text-[#2d4a22] py-20 px-6">
+                    <div class="max-w-6xl mx-auto">
+                        <span class="text-xs uppercase tracking-widest font-bold text-[#2d4a22]/60 block mb-2">Institutional Ledger</span>
+                        <h1 class="font-editorial text-5xl md:text-7xl font-bold uppercase tracking-tight mb-8">About Corporate Overview</h1>
+                        <p class="text-xl font-light max-w-3xl leading-relaxed mb-12">
+                            ECO GROW operates as a premium centralized strategic organization focused on mitigating critical habitat loss through aggressive territorial restoration metrics. We align institutional funding paths with direct localized frontline operations.
+                        </p>
+
+                        <div class="my-20">
+                            <h2 class="font-editorial text-3xl uppercase tracking-tight mb-8 border-b border-[#2d4a22]/20 pb-4">Alliance Matrix (Key Strategic Partners)</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div class="bg-white p-8 rounded-xl shadow-sm border border-[#2d4a22]/10">
+                                    <div class="text-[#2d4a22] font-editorial text-2xl font-black mb-3">KENYA FOREST SERVICE</div>
+                                    <p class="text-sm text-[#2d4a22]/80">Institutional operational alignment managing strict gazetted forest ecosystems, anti-poaching boundaries, and sovereign canopy re-seeding missions.</p>
+                                </div>
+                                <div class="bg-white p-8 rounded-xl shadow-sm border border-[#2d4a22]/10">
+                                    <div class="text-[#2d4a22] font-editorial text-2xl font-black mb-3">KENYA RED CROSS</div>
+                                    <p class="text-sm text-[#2d4a22]/80">Humanitarian resource integration combining climate displacement community crisis metrics with aggressive localized ecological stabilization programs.</p>
+                                </div>
+                                <div class="bg-white p-8 rounded-xl shadow-sm border border-[#2d4a22]/10">
+                                    <div class="text-[#2d4a22] font-editorial text-2xl font-black mb-3">IOMe 254</div>
+                                    <p class="text-sm text-[#2d4a22]/80">Technology integration deployment utilizing systemic real-time circular waste metrics, community tech hubs, and modern youth-led field monitoring platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-20">
+                            <h2 class="font-editorial text-3xl uppercase tracking-tight mb-8 border-b border-[#2d4a22]/20 pb-4">Command Team Leadership</h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                                <div class="space-y-3">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400" alt="Team" class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-300">
+                                    <h4 class="font-editorial text-xl font-bold uppercase tracking-tight mb-0">Dr. Amina Vance</h4>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-[#2d4a22]/60">Chief Ecological Officer</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" alt="Team" class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-300">
+                                    <h4 class="font-editorial text-xl font-bold uppercase tracking-tight mb-0">Marcus Thorne</h4>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-[#2d4a22]/60">Head of Global Alliances</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400" alt="Team" class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-300">
+                                    <h4 class="font-editorial text-xl font-bold uppercase tracking-tight mb-0">Elena Rostova</h4>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-[#2d4a22]/60">Director of Spatial Analytics</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400" alt="Team" class="w-full h-64 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-300">
+                                    <h4 class="font-editorial text-xl font-bold uppercase tracking-tight mb-0">David Kimani</h4>
+                                    <p class="text-xs font-semibold uppercase tracking-wider text-[#2d4a22]/60">Lead Field Systems Engineer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            `,
+
+            // CONSERVATION PROGRAMS PAGE
+            programs: `
+                <section class="py-20 px-6 max-w-6xl mx-auto">
+                    <span class="text-xs uppercase tracking-widest text-[#e2f197] font-bold block mb-2">Tactical Map</span>
+                    <h1 class="font-editorial text-5xl md:text-7xl font-bold uppercase tracking-tight text-white mb-12">Conservation Programs</h1>
+                    <div class="space-y-12">
+                        <div class="bg-[#2d4a22]/20 border border-white/10 rounded-2xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=500" class="rounded-xl w-full h-48 object-cover col-span-1" alt="Program">
+                            <div class="col-span-2">
+                                <h3 class="font-editorial text-3xl font-bold text-[#e2f197] uppercase mb-2">Unit Alpha — Canopy Re-Engineering</h3>
+                                <p class="text-sm text-neutral-300 leading-relaxed mb-4">Utilizing high-altitude programmatic drone deployment sequences and native seed pods to rapidly re-establish devastated montane forest ecosystems across regional catchments.</p>
+                                <a href="#volunteer" class="text-xs text-[#e2f197] uppercase tracking-widest font-bold underline">Deploy With This Unit →</a>
+                            </div>
+                        </div>
+                        <div class="bg-[#2d4a22]/20 border border-white/10 rounded-2xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=500" class="rounded-xl w-full h-48 object-cover col-span-1" alt="Program">
+                            <div class="col-span-2">
+                                <h3 class="font-editorial text-3xl font-bold text-[#e2f197] uppercase mb-2">Unit Beta — Pelagic Safe Zones</h3>
+                                <p class="text-sm text-neutral-300 leading-relaxed mb-4">Enforcing perimeter metrics on delicate marine shelves, deploying structured artificial reef baselines, and monitoring real-time coral heat thresholds.</p>
+                                <a href="#partner" class="text-xs text-[#e2f197] uppercase tracking-widest font-bold underline">Fund Marine Systems →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+
+            // SCIENTIFIC IMPACT STUDIES PAGE (Houses the 3 Deep Article Modules)
+            "impact-studies": `
+                <section class="py-20 px-6 max-w-6xl mx-auto">
+                    <span class="text-xs uppercase tracking-widest text-[#e2f197] font-bold block mb-2">Verified Framework Data</span>
+                    <h1 class="font-editorial text-5xl md:text-7xl font-bold uppercase tracking-tight text-white mb-6">Scientific Impact Studies</h1>
+                    <p class="text-neutral-400 max-w-2xl mb-16 text-sm">Our research laboratory tracks global spatial data metrics to ensure absolute telemetry accuracy across all operational zones.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-black/40 border border-white/10 p-8 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-[#e2f197] block mb-2">Document 108</span>
+                                <h3 class="font-editorial text-2xl font-bold text-white uppercase tracking-tight mb-4">The Great Barrier Reef Recovery</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-6">A rigorous analytical assessment of internal coral tissue revival data loops following structural artificial substrate anchoring configurations.</p>
+                            </div>
+                            <a href="#article-1" class="bg-white/10 text-white font-editorial text-center py-3 uppercase tracking-wider text-xs font-bold hover:bg-[#e2f197] hover:text-[#2d4a22] transition-colors">Open Full Report</a>
+                        </div>
+
+                        <div class="bg-black/40 border border-white/10 p-8 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-[#e2f197] block mb-2">Document 204</span>
+                                <h3 class="font-editorial text-2xl font-bold text-white uppercase tracking-tight mb-4">Arctic Ice Melt Accelerates</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-6">Real-time dynamic profiling tracking multi-year pack ice decay velocity indices across specific target coordinates using satellite arrays.</p>
+                            </div>
+                            <a href="#article-2" class="bg-white/10 text-white font-editorial text-center py-3 uppercase tracking-wider text-xs font-bold hover:bg-[#e2f197] hover:text-[#2d4a22] transition-colors">Open Full Report</a>
+                        </div>
+
+                        <div class="bg-black/40 border border-white/10 p-8 rounded-xl flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-[#e2f197] block mb-2">Document 441</span>
+                                <h3 class="font-editorial text-2xl font-bold text-white uppercase tracking-tight mb-4">Urban Reforestation Success Stories</h3>
+                                <p class="text-xs text-neutral-400 leading-relaxed mb-6">Empirical tracking analyzing urban heat mitigation indexes across dense industrial parameters following intentional native micro-forest integration loops.</p>
+                            </div>
+                            <a href="#article-3" class="bg-white/10 text-white font-editorial text-center py-3 uppercase tracking-wider text-xs font-bold hover:bg-[#e2f197] hover:text-[#2d4a22] transition-colors">Open Full Report</a>
+                        </div>
+                    </div>
+                </section>
+            `,
+
+            // EXPLICIT ARTICLE PAGE 1
+            "article-1": `
+                <article class="py-20 px-6 max-w-4xl mx-auto">
+                    <a href="#impact-studies" class="text-xs font-bold uppercase tracking-widest text-[#e2f197] mb-6 block">← Return to Laboratory Files</a>
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200" class="w-full h-96 object-cover rounded-2xl mb-10 border border-white/10" alt="Reef">
+                    <span class="text-xs uppercase tracking-widest bg-[#2d4a22] text-[#e2f197] px-3 py-1 font-bold rounded">Marine Systems Document</span>
+                    <h1 class="font-editorial text-4xl sm:text-6xl font-black uppercase text-white tracking-tight my-4">The Great Barrier Reef Recovery</h1>
+                    <div class="text-sm text-neutral-300 space-y-6 leading-relaxed font-light">
+                        <p class="text-base font-medium text-white">This document details our systematic deployment of structural artificial substrate lattices across compromised zones of the Great Barrier Reef ecosystem network.</p>
+                        <p>Through our coordinated alliance telemetry tracks, scientists witnessed a remarkable 34% normalization velocity acceleration in hard coral calcification indexes within twelve months of structural intervention. These matrix frameworks mitigate micro-current sheer stressors, providing stabilized anchoring vectors for natural marine polyps.</p>
+                        <p>Continued telemetry logging in coordination with maritime monitoring assets points toward sustainable thermal defensive adaptations across monitored micro-clones.</p>
+                    </div>
+                </article>
+            `,
+
+            // EXPLICIT ARTICLE PAGE 2
+            "article-2": `
+                <article class="py-20 px-6 max-w-4xl mx-auto">
+                    <a href="#impact-studies" class="text-xs font-bold uppercase tracking-widest text-[#e2f197] mb-6 block">← Return to Laboratory Files</a>
+                    <img src="https://images.unsplash.com/photo-1517783999520-f068d7431a60?q=80&w=1200" class="w-full h-96 object-cover rounded-2xl mb-10 border border-white/10" alt="Ice">
+                    <span class="text-xs uppercase tracking-widest bg-red-950 text-red-300 px-3 py-1 font-bold rounded">Cryosphere Crisis Document</span>
+                    <h1 class="font-editorial text-4xl sm:text-6xl font-black uppercase text-white tracking-tight my-4">Arctic Ice Melt Accelerates</h1>
+                    <div class="text-sm text-neutral-300 space-y-6 leading-relaxed font-light">
+                        <p class="text-base font-medium text-red-200">Satellite array parameters indicate severe thermal absorption anomalies across deep multi-year polar pack configurations.</p>
+                        <p>Our spatial analysis models confirm localized oceanographic current temperature adjustments of up to $+1.2^\circ\text{C}$ across northern sound systems. This change breaks down long-term ice anchors, pushing huge masses of old ice into warm southern paths where they quickly break up.</p>
+                        <p>ECO GROW is tracking these metrics to map secondary impacts on migratory marine mammal movements and global atmospheric jet variations.</p>
+                    </div>
+                </article>
+            `,
+
+            // EXPLICIT ARTICLE PAGE 3
+            "article-3": `
+                <article class="py-20 px-6 max-w-4xl mx-auto">
+                    <a href="#impact-studies" class="text-xs font-bold uppercase tracking-widest text-[#e2f197] mb-6 block">← Return to Laboratory Files</a>
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200" class="w-full h-96 object-cover rounded-2xl mb-10 border border-white/10" alt="Forest">
+                    <span class="text-xs uppercase tracking-widest bg-[#2d4a22] text-[#e2f197] px-3 py-1 font-bold rounded">Urban Ecology Document</span>
+                    <h1 class="font-editorial text-4xl sm:text-6xl font-black uppercase text-white tracking-tight my-4">Urban Reforestation Success Stories</h1>
+                    <div class="text-sm text-neutral-300 space-y-6 leading-relaxed font-light">
+                        <p class="text-base font-medium text-white">Intentionally deployed mini native micro-forest configurations have significantly mitigated toxic micro-particle loads in industrial sectors.</p>
+                        <p>By using the Miyawaki forest methodology alongside our technical circular metrics partners at IOMe 254, these compact city ecosystems develop up to thirty times faster than standard linear tree farms.</p>
+                        <p>The resulting canopy density effectively lowers regional concrete thermal retention profiles by up to $4.5^\circ\text{C}$, confirming urban re-wilding as a highly effective tool for modern urban centers.</p>
+                    </div>
+                </article>
+            `,
+
+            // DIRECT ACTION PORTAL & GET INVOLVED ROUTE
+            "get-involved": `
+                <section class="py-20 px-6 max-w-5xl mx-auto text-center">
+                    <span class="text-xs uppercase tracking-widest text-[#e2f197] font-bold block mb-2">Direct Action Hub</span>
+                    <h1 class="font-editorial text-5xl md:text-7xl font-bold uppercase tracking-tight text-white mb-8">Direct Action Portal</h1>
+                    <p class="text-neutral-300 max-w-xl mx-auto text-sm leading-relaxed mb-12">Select your deployment vector from our strategic directive choices to inject capital or human energy directly into our conservation efforts.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <a href="#donate" class="bg-[#2d4a22]/30 border border-white/10 rounded-2xl p-8 hover:border-[#e2f197] transition-all block text-left">
+                            <div class="font-editorial text-2xl text-white uppercase font-bold mb-2">Donate Capital</div>
+                            <p class="text-xs text-neutral-400">Directly fund critical land purchases and support real-time protection forces on the ground.</p>
+                        </a>
+                        <a href="#volunteer" class="bg-[#2d4a22]/30 border border-white/10 rounded-2xl p-8 hover:border-[#e2f197] transition-all block text-left">
+                            <div class="font-editorial text-2xl text-white uppercase font-bold mb-2">Volunteer Force</div>
+                            <p class="text-xs text-neutral-400">Join real field operations, support re-seeding campaigns, and assist regional research labs.</p>
+                        </a>
+                        <a href="#partner" class="bg-[#2d4a22]/30 border border-white/10 rounded-2xl p-8 hover:border-[#e2f197] transition-all block text-left">
+                            <div class="font-editorial text-2xl text-white uppercase font-bold mb-2">Partner Alliances</div>
+                            <p class="text-xs text-neutral-400">Align corporate social impact budgets or technical frameworks directly with our mission goals.</p>
+                        </a>
+                    </div>
+                </section>
+            `,
+
+            // DONATE PAGE (Donate Capital Directive)
+            donate: `
+                <section class="py-20 px-6 max-w-xl mx-auto bg-[#2d4a22]/20 border border-white/10 rounded-3xl my-12 p-8 md:p-12">
+                    <span class="text-xs uppercase tracking-widest text-[#e2f197] font-bold block mb-1">Financial Pipeline</span>
+                    <h2 class="font-editorial text-4xl font-bold uppercase tracking-tight text-white mb-6">Donate Capital</h2>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Capital deployment simulated successfully.');">
+                        <div>
+                            <label class="block text-xs uppercase font-semibold tracking-wider text-neutral-400 mb-2">Select Allocation Node</label>
+                            <select class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-[#e2f197]">
+                                <option>General Land Purchase Operations</option>
+                                <option>Kenyan Canopy Restoration Initiatives</option>
+                                <option>Marine Shelf Technical Frameworks</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase font-semibold tracking-wider text-neutral-400 mb-2">Capital Investment Tier ($ USD)</label>
+                            <div class="grid grid-cols-4 gap-3 font-editorial text-center text-lg font-bold">
+                                <div class="border border-white/20 p-3 rounded-lg hover:border-[#e2f197] cursor-pointer">$50</div>
+                                <div class="border border-[#e2f197] bg-[#e2f197] text-[#2d4a22] p-3 rounded-lg cursor-pointer">$250</div>
+                                <div class="border border-white/20 p-3 rounded-lg hover:border-[#e2f197] cursor-pointer">$1000</div>
+                                <div class="border border-white/20 p-3 rounded-lg hover:border-[#e2f197] cursor-pointer">Custom</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-[#e2f197] text-[#2d4a22] font-editorial text-center py-4 font-bold uppercase tracking-widest hover:bg-white transition-all">Authorize Capital Deployment</button>
+                    </form>
+                </section>
+            `,
+
+            // VOLUNTEER PAGE (Volunteer Force Directive)
+            volunteer: `
+                <section class="py-20 px-6 max-w-xl mx-auto bg-[#2d4a22]/20 border border-white/10 rounded-3xl my-12 p-8 md:p-12">
+                    <span class="text-xs uppercase tracking-widest text-[#e2f197] font-bold block mb-1">Human Logistics</span>
+                    <h2 class="font-editorial text-4xl font-bold uppercase tracking-tight text-white mb-6">Volunteer Force Enrollment</h2>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Deployment application logged.');">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs uppercase text-neutral-400 mb-1">First Name</label>
+                                <input type="text" class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white" required />
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase text-neutral-400 mb-1">Last Name</label>
+                                <input type="text" class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white" required />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase text-neutral-400 mb-1">Operational Skills Profile</label>
+                            <select class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white">
+                                <option>Field Botany & Canopy Re-Seeding</option>
+                                <option>Data Analytics & Drone Mapping</option>
+                                <option>Marine Operations & SCUBA Certified</option>
+                                <option>General Administrative Logistics</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-[#e2f197] text-[#2d4a22] font-editorial text-center py-4 font-bold uppercase tracking-widest hover:bg-white transition-all">Enlist in the Force</button>
+                    </form>
+                </section>
+            `,
+
+            // PARTNER PAGE (Partner Alliances Directive)
+            partner: `
+                <section class="py-20 px-6 max-w-xl mx-auto bg-[#2d4a22]/20 border border-white/10 rounded-3xl my-12 p-8 md:p-12">
+                    <span class="text-xs uppercase tracking-widest text-[#e2f197] font-bold block mb-1">Institutional Integration</span>
+                    <h2 class="font-editorial text-4xl font-bold uppercase tracking-tight text-white mb-6">Partner Alliances</h2>
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Strategic alliance proposal logged into system.');">
+                        <div>
+                            <label class="block text-xs uppercase text-neutral-400 mb-1">Corporate Entity Name</label>
+                            <input type="text" class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white" required />
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase text-neutral-400 mb-1">Core Operational Country</label>
+                            <input type="text" value="Kenya" class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white" required />
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase text-neutral-400 mb-1">Alliance Objective Summary</label>
+                            <textarea class="w-full bg-black/40 border border-white/20 rounded-lg p-3 text-sm text-white h-24"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#e2f197] text-[#2d4a22] font-editorial text-center py-4 font-bold uppercase tracking-widest hover:bg-white transition-all">Submit Integration Protocol</button>
+                    </form>
+                </section>
+            `,
+
+            // SUBSCRIBE PAGE (Newsletter Signup Directive)
+            subscribe: `
+                <section class="py-20 px-6 max-w-md mx-auto text-center">
+                    <span class="text-[#e2f197] font-editorial uppercase tracking-widest text-sm font-bold block mb-2">Telemetry Dispatches</span>
+                    <h2 class="font-editorial text-4xl font-bold uppercase tracking-tight text-white mb-4">Newsletter Signup</h2>
+                    <p class="text-neutral-400 text-sm font-light mb-8">Receive instant programmatic security dispatches, laboratory findings, and environmental framework adjustments directly.</p>
+                    <form onsubmit="event.preventDefault(); alert('Secure communication channel open.');" class="space-y-4">
+                        <input type="email" placeholder="secure-terminal@domain.com" class="w-full bg-black/40 border border-white/20 rounded-lg p-4 text-center text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#e2f197]" required />
+                        <button type="submit" class="w-full bg-[#e2f197] text-[#2d4a22] font-editorial py-4 uppercase font-bold tracking-widest text-sm hover:bg-white transition-all">Open Signal Pipeline</button>
+                    </form>
+                </section>
+            `,
+
+            // PRIVACY POLICY SECTION
+            privacy: `
+                <section class="py-20 px-6 max-w-3xl mx-auto font-light text-neutral-300 leading-relaxed space-y-6">
+                    <h1 class="font-editorial text-4xl font-bold uppercase text-white mb-8 tracking-tight">Privacy Policy</h1>
+                    <p>ECO GROW tracks environmental spatial data points. Any information logged via public portals remains isolated under absolute encryption frameworks.</p>
+                    <p>We do not sell tracking metadata to industrial operations or corporate advertising collectives.</p>
+                </section>
+            `,
+
+            // TERMS OF USE SECTION
+            terms: `
+                <section class="py-20 px-6 max-w-3xl mx-auto font-light text-neutral-300 leading-relaxed space-y-6">
+                    <h1 class="font-editorial text-4xl font-bold uppercase text-white mb-8 tracking-tight">Terms of Use</h1>
+                    <p>Our maps and tracking data are open-source and free to read. Commercial entities must secure explicitly authorized written licenses before using our operational field white papers in regulatory carbon market evaluations.</p>
+                </section>
+            `
+        };
+
+        // CLIENT-SIDE SPA SINGLE PAGE ROUTER ENGINE
+        function handleSPARoute() {
+            const viewport = document.getElementById('router-viewport');
+            
+            // Extract anchor hash parameter location, default to landing page container
+            let route = window.location.hash.substring(1) || 'home';
+            
+            // Fallback route handling logic
+            if (!Pages[route]) {
+                route = 'home';
+            }
+            
+            // Re-render view container and update UI focus safely
+            viewport.innerHTML = Pages[route];
+            window.scrollTo(0, 0);
+            
+            // Add clean transition animations
+            viewport.classList.remove('page-fade');
+            void viewport.offsetWidth; // Force CSS reflow calculation rule
+            viewport.classList.add('page-fade');
+        }
+
+        // Window Event Bindings for SPA Routing Navigation Actions
+        window.addEventListener('hashchange', handleSPARoute);
+        window.addEventListener('DOMContentLoaded', handleSPARoute);
+    </script>
+
+</body>
+</html>
