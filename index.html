@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECO GROW — Protecting Biodiversity for Future Generations</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="/css/output.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Design System Tokens Extends Base Tailwind config styles */
+        :root {
+            --color-forest: #2d4a22;
+            --color-lime: #e2f197;
+            --color-neutral: #f4f3ef;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #121c0e; /* Immersive Dark-Mode Start */
+        }
+        .font-editorial {
+            font-family: 'Oswald', 'Arial Narrow', sans-serif;
+        }
+        /* Custom Diagonal Asymmetric Cuts */
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        }
+        @media (max-width: 768px) {
+            .clip-diagonal {
+                clip-path: none;
+            }
+        }
+    </style>
 </head>
 <body class="text-neutral-100 antialiased overflow-x-hidden">
 
     <nav class="fixed top-0 left-0 w-full z-50 bg-[#2d4a22]/80 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-2 font-editorial text-2xl font-bold uppercase tracking-wider text-white">
+        <a href="#" class="flex items-center gap-2 font-editorial text-2xl font-bold uppercase tracking-wider text-white">
             <span class="text-[#e2f197]">↑</span> ECO GROW
         </a>
         <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-white/90">
             <a href="about.html" class="hover:text-[#e2f197] transition-colors">About</a>
-            <a href="#articles" class="hover:text-[#e2f197] transition-colors">Articles</a>
-            <a href="#showcase" class="hover:text-[#e2f197] transition-colors">Showcase</a>
-            <a href="impact-studies.html" class="hover:text-[#e2f197] 
-            transition-colors">Impact</a>
             <a href="programs.html" class="hover:text-[#e2f197] transition-colors">Programs</a>
+            <a href="impact-studies.html" class="hover:text-[#e2f197] transition-colors">Impact Studies</a>
             <a href="get-involved.html" class="hover:text-[#e2f197] transition-colors">Get Involved</a>
         </div>
         <a href="donate.html" class="bg-[#e2f197] text-[#2d4a22] font-editorial uppercase px-5 py-2 font-bold tracking-wider text-sm hover:bg-white transition-all duration-300 transform hover:-translate-y-0.5">
@@ -56,7 +76,7 @@
                 </span>
             </div>
 
-            <a href="#cta" class="inline-flex items-center gap-3 bg-transparent border-2 border-[#e2f197] text-[#e2f197] font-editorial uppercase font-bold tracking-widest px-8 py-4 transition-all duration-300 hover:bg-[#e2f197] hover:text-[#2d4a22] group">
+            <a href="get-involved.html" class="inline-flex items-center gap-3 bg-transparent border-2 border-[#e2f197] text-[#e2f197] font-editorial uppercase font-bold tracking-widest px-8 py-4 transition-all duration-300 hover:bg-[#e2f197] hover:text-[#2d4a22] group">
                 Join Our Mission
                 <span class="transform group-hover:translate-x-1 transition-transform">→</span>
             </a>
@@ -80,7 +100,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-28">
                 
-                <div class="group relative bg-[#2d4a22]/30 rounded-xl overflow-hidden border border-white/5 flex flex-col h-[420px] transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-lg hover:shadow-[#2d4a22]/30">
+                <div class="group relative bg-[#2d4a22]/30 rounded-xl overflow-hidden border border-white/5 flex flex-col h-[420px] transition-all duration-500 hover:-translate-y-2 hover:border-white/20">
                     <div class="absolute inset-0 z-0 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800" alt="Great Barrier Reef" class="w-full h-full object-cover transition-transform duration-700 brightness-[0.5] group-hover:scale-110">
                     </div>
@@ -93,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="group relative bg-[#2d4a22]/30 rounded-xl overflow-hidden border border-white/5 flex flex-col h-[420px] transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-lg hover:shadow-[#2d4a22]/30">
+                <div class="group relative bg-[#2d4a22]/30 rounded-xl overflow-hidden border border-white/5 flex flex-col h-[420px] transition-all duration-500 hover:-translate-y-2 hover:border-white/20">
                     <div class="absolute inset-0 z-0 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1517783999520-f068d7431a60?q=80&w=800" alt="Arctic Ice Melt" class="w-full h-full object-cover transition-transform duration-700 brightness-[0.5] group-hover:scale-110">
                     </div>
@@ -106,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="group relative bg-[#2d4a22]/30 rounded-xl overflow-hidden border border-white/5 flex flex-col h-[420px] transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-lg hover:shadow-[#2d4a22]/30">
+                <div class="group relative bg-[#2d4a22]/30 rounded-xl overflow-hidden border border-white/5 flex flex-col h-[420px] transition-all duration-500 hover:-translate-y-2 hover:border-white/20">
                     <div class="absolute inset-0 z-0 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=800" alt="Urban Reforestation" class="w-full h-full object-cover transition-transform duration-700 brightness-[0.5] group-hover:scale-110">
                     </div>
@@ -129,12 +149,10 @@
                     </div>
                     <div class="flex items-center gap-3">
                         <button id="prev-btn" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                            <!-- ← -->
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M11 4L6 9l5 5"/></svg>
+                            ←
                         </button>
                         <button id="next-btn" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                            <!-- → -->
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 4l5 5-5 5"/></svg>
+                            →
                         </button>
                     </div>
                 </div>
@@ -143,28 +161,25 @@
                     
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100 z-10">
                         <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?q=80&w=1200" alt="Deer in Wild" class="w-full h-full object-cover">
-                        <div class="absolute bottom-8 left-8 z-10">
-                            <p class="text-[#e2f197] text-xs font-editorial tracking-[0.25em] uppercase mb-1">Featured — Wildlife</p>
-                            <h4 class="font-display text-4xl text-white font-editorial tracking-wide">Deer at Dawn</h4>
-                            <p class="text-white text-sm font-medium mt-1">Misty morning light in the old-growth forests of the Pacific Northwest.</p>
+                        <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full">
+                            <p class="text-sm font-medium tracking-wide text-white">White-tailed deer foraging in protected temperate forest systems.</p>
                         </div>
                     </div>
-                    <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
-                        <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=1200&auto=format&fit=crop" alt="Macaw in Rainforest" class="w-full h-full object-cover">
-                        <div class="absolute bottom-8 left-8 z-10">
-                            <p class="text-[#e2f197] text-xs font-editorial tracking-[0.25em] uppercase mb-1">Featured — Wildlife</p>
-                            <h4 class="font-display text-4xl text-white font-editorial tracking-wide">A Watchful Fox</h4>
-                            <p class="text-white text-sm font-medium mt-1">A red fox surveys its territory at the forest's edge at dusk.</p>
-                        </div>
-                    </div>
+
                     <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
                         <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1200" alt="Lioness on Savannah" class="w-full h-full object-cover">
-                        <div class="absolute bottom-8 left-8 z-10">
-                            <p class="text-[#e2f197] text-xs font-editorial tracking-[0.25em] uppercase mb-1">Featured — Wildlife</p>
-                            <h4 class="font-display text-4xl font-editorial tracking-wide">A Preying Lion </h4>
-                            <p class="text-white text-sm font-medium mt-1">Apex predators monitoring expanding conservancy zones in East Africa.</p>
+                        <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full">
+                            <p class="text-sm font-medium tracking-wide text-white">Apex predators monitoring expanding conservancy zones in East Africa.</p>
                         </div>
                     </div>
+
+                    <div class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200" alt="Macaw in Rainforest" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full">
+                            <p class="text-sm font-medium tracking-wide text-white">Scarlet Macaws reintroduced to complex native canopy architectures.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -190,22 +205,8 @@
                     <p class="text-lg text-[#2d4a22]/80 font-light leading-relaxed mb-6">
                         ECO GROW is dedicated to protecting global biodiversity and restoring threatened ecosystems through data-driven, community-backed conservation frameworks.
                     </p>
-                    <!-- <div class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase border-b-2 border-[#2d4a22] pb-1">
+                    <div class="inline-flex items-center gap-2 text-sm font-bold tracking-wider uppercase border-b-2 border-[#2d4a22] pb-1">
                         Learn more at <a href="http://ecogrow.org" target="_blank" class="hover:opacity-70 transition-opacity">ecogrow.org</a>
-                    </div> -->
-                    <!-- Footer link -->
-                    <div class="mt-14 flex items-center gap-4 reveal">
-                        <!-- Coral icon -->
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" class="text-forest/30 flex-shrink-0">
-                        <path d="M18 32 C18 32 8 24 8 16 C8 10 12 6 18 6 C24 6 28 10 28 16 C28 24 18 32 18 32Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                        <path d="M18 6 L18 32" stroke="currentColor" stroke-width="1" opacity="0.5"/>
-                        <path d="M12 14 C12 14 8 10 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                        <path d="M24 14 C24 14 28 10 30 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                        </svg>
-                        <p class="text-forest/55 text-sm font-light">
-                        Learn more about our programs at
-                        <a href="https://ecogrow.org" class="text-forest font-medium underline underline-offset-2 hover:text-forest-light transition-colors">ecogrow.org</a>
-                        </p>
                     </div>
                 </div>
 
@@ -216,7 +217,7 @@
                             500+ <span class="block text-xs uppercase tracking-widest font-sans font-medium text-[#2d4a22]/60 mt-1">Species</span>
                         </div>
                         <p class="text-sm text-[#2d4a22]/70 leading-relaxed pt-2">
-                            Protected securely across interconnected global & country wide ecosystem sanctuaries through our highly managed conservation frameworks.
+                            Protected securely across interconnected global ecosystem sanctuaries through our highly managed conservation frameworks.
                         </p>
                     </div>
 
@@ -231,10 +232,10 @@
 
                     <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start pb-2">
                         <div class="font-editorial text-5xl sm:text-6xl font-black tracking-tight text-[#2d4a22] sm:w-48 shrink-0">
-                            17 <span class="block text-xs uppercase tracking-widest font-sans font-medium text-[#2d4a22]/60 mt-1">Counties</span>
+                            50 <span class="block text-xs uppercase tracking-widest font-sans font-medium text-[#2d4a22]/60 mt-1">Countries</span>
                         </div>
                         <p class="text-sm text-[#2d4a22]/70 leading-relaxed pt-2">
-                            Active administrative programs deploying real-time intelligence loops across forest, marine, and highland regions.
+                            Active administrative programs deploying real-time intelligence loops across forest, marine, and savanna regions.
                         </p>
                     </div>
 
@@ -256,7 +257,8 @@
                 <p class="text-neutral-300 max-w-md font-light text-sm leading-relaxed mb-8">
                     Your financial support transforms vulnerable territories directly into heavily monitored wildlife preservation sanctuaries.
                 </p>
-                <button class="bg-[#e2f197] text-[#2d4a22] font-editorial uppercase tracking-wider font-bold text-base px-8 py-4 shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 cursor-pointer"><a href="donate.html">Donate Now</a>
+                <button class="bg-[#e2f197] text-[#2d4a22] font-editorial uppercase tracking-wider font-bold text-base px-8 py-4 shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 cursor-pointer">
+                    Donate Now
                 </button>
             </div>
 
@@ -300,10 +302,10 @@
                 <div class="md:col-span-3">
                     <h4 class="font-editorial uppercase tracking-wider text-[#e2f197] text-sm font-bold mb-4 border-b border-white/10 pb-2">Quick Links</h4>
                     <ul class="space-y-2 text-sm text-neutral-300">
-                        <li><a href="about.html" class="hover:text-white transition-colors">→ About Corporate Overview</a></li>
-                        <li><a href="programs.html" class="hover:text-white transition-colors">→ Conservation Programs</a></li>
-                        <li><a href="impact-studies.html" class="hover:text-white transition-colors">→ Scientific Impact Studies</a></li>
-                        <li><a href="direct-action.html" class="hover:text-white transition-colors">→ Direct Action Portal</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Corporate Overview</a></li>
+                        <li><a href="programs.html" class="hover:text-white transition-colors">Conservation Programs</a></li>
+                        <li><a href="impact-studies.html" class="hover:text-white transition-colors">Scientific Impact Studies</a></li>
+                        <li><a href="get-involved.html" class="hover:text-white transition-colors">Direct Action Portal</a></li>
                     </ul>
                 </div>
 
@@ -328,9 +330,9 @@
                 </div>
 
                 <div class="flex gap-4">
-                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
                     <span>|</span>
-                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
                 </div>
 
                 <div>

@@ -1,0 +1,93 @@
+:root {
+    --color-forest: #2d4a22;
+    --color-lime: #e2f197;
+    --color-neutral: #f4f3ef;
+    --color-slate: #0f1710;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color-neutral);
+    background-color: var(--color-slate);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-editorial {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+}
+
+.clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+    .clip-diagonal {
+        clip-path: none;
+    }
+}
+
+.hero-overlay {
+    background: rgba(18, 28, 14, 0.62);
+}
+
+.hero-image {
+    transition: transform 10s ease-out, opacity 0.6s;
+}
+
+.hero-image:hover {
+    transform: scale(1.03);
+}
+
+.section-card {
+    background: rgba(21, 50, 20, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.primary-button {
+    background: var(--color-lime);
+    color: var(--color-forest);
+}
+
+.primary-button:hover {
+    background: #ffffff;
+}
+
+.secondary-button {
+    border-color: rgba(226, 241, 151, 0.5);
+    color: var(--color-neutral);
+}
+
+.form-input {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--color-neutral);
+}
+
+.form-input:focus {
+    outline: 2px solid rgba(226, 241, 151, 0.5);
+    outline-offset: 2px;
+}
+
+.page-label {
+    letter-spacing: 0.35em;
+}
+
+.text-glow {
+    text-shadow: 0 0 18px rgba(226, 241, 151, 0.18);
+}
+
+article h3,
+article h2,
+section h2,
+section h3 {
+    word-break: break-word;
+}
+
+footer a:hover {
+    color: var(--color-lime);
+}

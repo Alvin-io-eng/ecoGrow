@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Impact Studies | ECO GROW</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-neutral-100 antialiased overflow-x-hidden bg-[#121c0e]">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#2d4a22]/90 backdrop-blur-md border-b border-white/10 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2 font-editorial text-2xl font-bold uppercase tracking-wider text-white">
+            <span class="text-[#e2f197]">↑</span> ECO GROW
+        </a>
+        <div class="flex flex-wrap items-center gap-5 text-sm font-medium tracking-wide text-white/90">
+            <a href="about.html" class="hover:text-[#e2f197] transition-colors">About</a>
+            <a href="programs.html" class="hover:text-[#e2f197] transition-colors">Programs</a>
+            <a href="impact-studies.html" class="hover:text-[#e2f197] transition-colors">Impact Studies</a>
+            <a href="get-involved.html" class="hover:text-[#e2f197] transition-colors">Get Involved</a>
+        </div>
+        <a href="donate.html" class="primary-button font-editorial uppercase px-5 py-2 font-bold tracking-wider text-sm transition-all duration-300 hover:bg-white hover:text-[#2d4a22]">
+            Donate
+        </a>
+    </nav>
+
+    <header class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0">
+            <img id="hero-bg" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1920"
+                 alt="Scientists studying biodiversity"
+                 class="w-full h-full object-cover hero-image brightness-[0.45]">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <span class="text-[#e2f197] font-editorial uppercase tracking-[0.35em] text-sm sm:text-base font-bold mb-4 block">Scientific Impact Studies</span>
+            <h1 class="font-editorial text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-tight leading-[0.95] text-white mb-6">
+                Research Directory & Evidence Archive
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto font-light leading-relaxed">
+                Discover the latest field studies, long-term monitoring reports and science-backed impact narratives shaping ECO GROW’s restoration outcomes.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24 space-y-24">
+        <section class="grid gap-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                <div>
+                    <span class="text-[#e2f197] uppercase tracking-[0.35em] text-xs font-semibold block mb-3">Impact Directory</span>
+                    <h2 class="text-4xl font-editorial font-bold uppercase tracking-tight text-white">Recent Studies & Ongoing Evaluations</h2>
+                </div>
+                <p class="max-w-xl text-neutral-300 leading-relaxed text-sm md:text-base">
+                    The archive includes ecosystem recovery assessments, climate impact models and field-verified success stories from across our global footprint.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group relative overflow-hidden rounded-[2rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800" alt="Reef analysis" class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="p-8 bg-[#121c0e]/95">
+                        <span class="text-[#e2f197] uppercase tracking-[0.35em] text-xs font-semibold block mb-3">Marine Recovery</span>
+                        <h3 class="text-2xl font-editorial uppercase tracking-tight text-white mb-4">The Great Barrier Reef Recovery</h3>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            Field study of reef restoration success metrics, coral cover trends and coastal community benefits in the Indo-Pacific.
+                        </p>
+                        <a href="article-1.html" class="inline-flex items-center gap-2 text-sm font-semibold tracking-wider text-[#e2f197] hover:text-white transition-colors">Read full study →</a>
+                    </div>
+                </article>
+                <article class="group relative overflow-hidden rounded-[2rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1517783999520-f068d7431a60?q=80&w=800" alt="Arctic ice field" class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="p-8 bg-[#121c0e]/95">
+                        <span class="text-[#e2f197] uppercase tracking-[0.35em] text-xs font-semibold block mb-3">Climate Response</span>
+                        <h3 class="text-2xl font-editorial uppercase tracking-tight text-white mb-4">Arctic Ice Melt Accelerates</h3>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            Climate impact report examining ice loss, sea level feedbacks and policy-ready mitigation roadmaps for polar ecosystems.
+                        </p>
+                        <a href="article-2.html" class="inline-flex items-center gap-2 text-sm font-semibold tracking-wider text-[#e2f197] hover:text-white transition-colors">Read full study →</a>
+                    </div>
+                </article>
+                <article class="group relative overflow-hidden rounded-[2rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=800" alt="Urban forest canopy" class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="p-8 bg-[#121c0e]/95">
+                        <span class="text-[#e2f197] uppercase tracking-[0.35em] text-xs font-semibold block mb-3">Urban Ecology</span>
+                        <h3 class="text-2xl font-editorial uppercase tracking-tight text-white mb-4">Urban Reforestation Success Stories</h3>
+                        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+                            Evaluation of urban canopy growth, air quality improvements and social engagement in city-based reforestation projects.
+                        </p>
+                        <a href="article-3.html" class="inline-flex items-center gap-2 text-sm font-semibold tracking-wider text-[#e2f197] hover:text-white transition-colors">Read full study →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="grid gap-8">
+            <div class="section-card rounded-3xl p-8">
+                <span class="text-[#e2f197] uppercase tracking-[0.35em] text-xs font-semibold">Archive Snapshot</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 text-neutral-300 text-sm leading-relaxed">
+                    <div>
+                        <p class="font-semibold text-white mb-3">Forest Biomass Regeneration</p>
+                        <p>Multi-year tree growth analysis from East African reforestation corridors.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-white mb-3">Wetland Carbon Sequestration</p>
+                        <p>Peatland restoration results quantifying freshwater habitat carbon capture.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-white mb-3">Wildlife Passage Monitoring</p>
+                        <p>Sensor and drone surveys tracking animal movement through protected corridors.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-white mb-3">Community Stewardship Metrics</p>
+                        <p>Participation outcomes for local-led conservation enterprises and training programs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1a2e14] text-white/90 border-t border-white/10 pt-16 pb-8 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <div class="md:col-span-4 space-y-4">
+                    <div class="font-editorial text-3xl font-bold uppercase tracking-wider text-white flex items-center gap-2">
+                        <span class="text-[#e2f197]">↑</span> ECO GROW
+                    </div>
+                    <p class="text-xs text-neutral-400 max-w-sm leading-relaxed">
+                        International biodiversity framework architecture. Registered global environmental non-profit ecosystem stewardship collective.
+                    </p>
+                </div>
+                <div class="md:col-span-3">
+                    <h4 class="font-editorial uppercase tracking-wider text-[#e2f197] text-sm font-bold mb-4 border-b border-white/10 pb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-neutral-300">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Corporate Overview</a></li>
+                        <li><a href="programs.html" class="hover:text-white transition-colors">Conservation Programs</a></li>
+                        <li><a href="impact-studies.html" class="hover:text-white transition-colors">Scientific Impact Studies</a></li>
+                        <li><a href="get-involved.html" class="hover:text-white transition-colors">Direct Action Portal</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-5">
+                    <h4 class="font-editorial uppercase tracking-wider text-[#e2f197] text-sm font-bold mb-4 border-b border-white/10 pb-2">Directives Network</h4>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2 font-editorial text-base uppercase font-bold tracking-wide">
+                        <a href="get-involved.html" class="hover:text-[#e2f197] transition-colors">Get Involved</a>
+                        <a href="donate.html" class="hover:text-[#e2f197] transition-colors">Donate Capital</a>
+                        <a href="volunteer.html" class="hover:text-[#e2f197] transition-colors">Volunteer Force</a>
+                        <a href="partner.html" class="hover:text-[#e2f197] transition-colors">Partner Alliances</a>
+                        <a href="subscribe.html" class="col-span-2 hover:text-[#e2f197] text-sm tracking-widest text-[#e2f197]/80 mt-2 transition-colors">Newsletter Signup →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-neutral-400">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="mailto:contact@ecogrow.org" class="hover:text-white transition-colors">contact@ecogrow.org</a>
+                    <a href="http://www.ecogrow.org" target="_blank" class="hover:text-white transition-colors">www.ecogrow.org</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Use</a>
+                </div>
+                <div>&copy; 2026 ECO GROW. All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
