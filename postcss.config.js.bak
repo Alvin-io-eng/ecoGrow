@@ -1,0 +1,7 @@
+// BACKUP of previous postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
